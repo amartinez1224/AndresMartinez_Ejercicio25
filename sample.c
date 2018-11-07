@@ -13,7 +13,8 @@ int main(int argc, char** argv){
     double *lista;
     lista =malloc(N*sizeof(double));
     FILE *in = fopen("sample.dat","w");
-    for(int i = 0; i<N; i++){
+    int i;
+    for( i = 0; i<N; i++){
         if (((double)rand()/(double)RAND_MAX)>0.5){
             lista[i] = (log((double)rand()/(double)RAND_MAX)*S)+C;
             fprintf(in,"%f\n",lista[i]);
